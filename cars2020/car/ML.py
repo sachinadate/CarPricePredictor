@@ -6,7 +6,13 @@ import pandas as pd
 from sklearn.ensemble import RandomForestRegressor as RFR
 
 
-df = pd.read_csv(r"C:\Users\Sachin\d_projects\cars2020\car\car_data.csv",header=0,encoding = 'unicode_escape')
+import os
+dirspot = os.getcwd()
+print(dirspot)
+
+url=dirspot+"\\car\\car_data.csv"
+
+df = pd.read_csv(url,header=0,encoding = 'unicode_escape')
 df2 = df.dropna(axis = 0)
 df2.rename(columns = {'Registered City':'RegisteredCity'}, inplace = True)
 not_num = df2.select_dtypes(include = ['object']).columns

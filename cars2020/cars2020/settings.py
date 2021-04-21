@@ -25,7 +25,9 @@ SECRET_KEY = '42)^n27h!%@u(@_3tde!^8$&ny)3rh$%6m(bb=q!tg9tn33v#x'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'cars20.herokuapp.com',
+]
 
 
 # Application definition
@@ -40,6 +42,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',

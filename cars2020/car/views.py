@@ -29,7 +29,7 @@ def getprice(request):
     #ML(cbrand,cyear,clocation,cfule,ckm)
     #model
 
-    return render(request,'carsell.html',{'price':ML.fun(xin),'valid':True})
+    return render(request,'carsell.html',{'price':(ML.fun(xin)/6).round(),'valid':True})
 
 
 
