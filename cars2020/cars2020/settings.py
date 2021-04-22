@@ -27,7 +27,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'cars20.herokuapp.com',
+    '127.0.0.1'
 ]
+
 
 
 # Application definition
